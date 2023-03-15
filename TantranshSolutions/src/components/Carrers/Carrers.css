@@ -1,0 +1,65 @@
+.bottomButtonHover:hover .iconHover3{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.iconHover3 {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+    cursor: pointer;
+    transition: 0.25s all ease-in-out;
+}
+.bottomButtonHover button{
+    border: none;
+    background-color: #034694;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+/* Main hover Effect */
+.box-effect{
+    position: relative;
+    z-index: 1;
+    border: none;
+    -webkit-box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
+box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
+}
+.box-effect::before{
+    content: "";
+    width: 0px;
+    height: 100%;
+    background-color: #034694;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 1s all;
+    border-radius: 5px;
+}
+.box-effect:hover::before{
+    width: 100%;
+}
+.box-effect:hover h5{
+    color: #fff;
+}
+.box-effect:hover p{
+    color: white;
+}
+.box-effect:hover .bottomButtonHover button{
+    background-color: transparent;
+}
+
+/* responsive code */
+@media (max-width:480px) {
+    .line-height-res{
+        line-height: 23px;    
+    }
+}
+
+@media (max-width:950px) {
+    .line-height-res{
+        line-height: 23px;    
+    }
+}
