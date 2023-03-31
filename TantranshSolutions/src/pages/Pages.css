@@ -1,0 +1,21 @@
+.box-shadow{
+    box-shadow: 1px 7px 10px -5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 7px 10px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 7px 10px -5px rgba(0,0,0,0.75);
+}
+
+/* Login panel icon */
+.login-panel-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:#034694;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.user-icon{
+    font-size: 25px;
+    color: white;
+}

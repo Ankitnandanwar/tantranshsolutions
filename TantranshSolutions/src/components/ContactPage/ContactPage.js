@@ -2,7 +2,6 @@ import React from 'react'
 import { FcFeedback } from "react-icons/fc";
 import { FcPhone } from "react-icons/fc";
 import { FcHome } from "react-icons/fc";
-import axios from 'axios'
 
 const ContactPage = () => {
 

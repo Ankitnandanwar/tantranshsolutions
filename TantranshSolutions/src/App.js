@@ -8,8 +8,12 @@ import HomeMain from './pages/HomeMain'
 import Carrers from './pages/Carrers'
 import ApplynowMain from './pages/Applynow'
 import ThankupageMain from './pages/Thankupage'
-import Dashboard from './components/Dashboard/dashboard'
-// import DummyImg from './components/uploadImageDummy/DummyImg'
+import AdminPanel from './pages/AdminPanel'
+import WebsitePanel from './pages/WebsitePanel'
+import JobPanel from './pages/JobPanel'
+import AdminLogin from './pages/AdminLogin'
+import JobPostPanel from './pages/JobPostPanel'
+import ViewJobPost from './pages/ViewJobPost'
 
 
 
@@ -24,8 +28,12 @@ const App = () => {
         <Route path='/carrers' element={<Carrers/>}/>
         <Route path='/apply-now' element={<ApplynowMain/>}/>
         <Route path='/thanku' element={<ThankupageMain/>}/>
-        <Route path='/dashboard' element={<Dashboard/>}/>
-        {/* <Route path='/dummyimg' element={<DummyImg/>}/> */}
+        <Route path='/admin' element={<AdminLogin/>}/>
+        <Route path='/admin-dashboard' element={<AdminPanel/>}/>
+        <Route path='/website-dashboard' element={<WebsitePanel/>}/>
+        <Route path='/job-dashboard' element={<JobPanel/>}/>
+        <Route path='/jobpost-dashboard' element={<JobPostPanel/>}/>
+        <Route path='/view-jobpost-dashboard' element={<ViewJobPost/>}/>
 
       </Routes>
     </BrowserRouter>

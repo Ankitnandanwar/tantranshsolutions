@@ -1,13 +1,28 @@
-import React from 'react'
-import carrersImg from '../../assets/CarrersImg.jpg'
+import React,{useState,useEffect} from 'react'
+import carrersImg from '../../assets/CarrersImg.png'
 import { BsArrowRight } from "react-icons/bs";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, createSearchParams } from 'react-router-dom';
+import axios from 'axios';
 import './Carrers.css'
-
+import Slider from 'infinite-react-carousel';
 
 const Carrers = () => {
 
+  const [postData, setPostData] = useState([])
   const navigate = useNavigate()
+
+
+    useEffect(() => {
+        let data = axios.get('http://localhost:6500/addnewjob').then((res)=>{
+        setPostData(res.data)
+        console.log(postData)
+     })
+    }, [])
+
+    const data = (title) =>{
+      navigate({pathname:"/apply-now", search:createSearchParams({postData:title}).toString()})
+    }
+
   return (
     <>
       {/* Carrer description and image */}
@@ -33,133 +48,39 @@ const Carrers = () => {
       <div className='container mt-5 mb-5'>
         <div className='row'>
         <h1 className='text-uppercase text-center' style={{color:"#034694"}}>we are hiring for</h1>
-
-          <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
+          {/* <Slider slidesToShow={3}> */}
+          {postData.map(card=>{
+            return(
+            <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
             <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}}>
-                <div className="card-body">
-                  <h5 className="card-title text-capitalize ">Android Developer</h5>
-                  <div className='mt-4 text-muted' style={{lineHeight:"13px", fontSize:"16px"}}>
-                    <p className="card-text line-height-res">Required Skills : Communication Skills, Quick Learner</p>
-                    <p className="card-text">Required Language : Kotlin, Java</p>
-                    <p className="card-text line-height-res">Experience : Fresher / Experience both can apply</p>
-                    <p className="card-text">Vacancy : 2</p>
+              <div className="card-body p-2">
+                <h5 className="card-title text-capitalize">{card.pjtitle}</h5>
+                <div className='mt-3 text-muted' style={{fontSize:"16px", lineHeight:"15px"}}>
+                  <p className="card-text line-height-res" style={{lineHeight:"25px"}}>Required Skills : {card.pjskills}</p>
+                  <p className="card-text">Required Language : {card.pjlang}</p>
+                  <p className="card-text line-height-res">Experience : {card.pjexp}</p>
+                  <p className="card-text">Vacancy : {card.pjvacancy}</p>
+                </div>
+              </div>
+              <div className=" bg-transparent">
+                <div className='d-flex justify-content-center pl-3 pr-3'><hr className='w-100'/></div>
+                  <div className="bottomButtonHover pb-3">
+                    <button onClick={() => data(card.pjtitle)}>
+                      <div className='btm mx-1 row justify-content-end'>
+                        <div className='col-auto px-1'>
+                          Apply Now
+                        </div>
+                        <div className='col-auto m-0 p-0 iconHover3 '>
+                          <BsArrowRight />
+                        </div>
+                      </div>
+                    </button>
                   </div>
-                </div>
-                <div className=" bg-transparent">
-                  <div className='d-flex justify-content-center pl-3 pr-3'><hr  className='w-100'/></div>
-                    <div className="bottomButtonHover pb-3">
-                      <button onClick={() => navigate("/apply-now")}>
-                          <div className='btm mx-1 row justify-content-end'>
-                              <div className='col-auto px-1'>
-                                  Apply Now
-                              </div>
-                              <div className='col-auto m-0 p-0 iconHover3 '>
-                                  <BsArrowRight />
-                              </div>
-                          </div>
-                      </button>
-                    </div>
-                </div>
+              </div>
             </div>
           </div>
-
-
-          
-          
-
-          <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
-            <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}}>
-                <div className="card-body">
-                  <h5 className="card-title text-capitalize ">React Js Developer</h5>
-                  <div className='mt-4 text-muted' style={{lineHeight:"13px", fontSize:"16px"}}>
-                    <p className="card-text line-height-res">Required Skills : Communication Skills, Quick Learner</p>
-                    <p className="card-text">Required Language : JavaScript, CSS, HTML</p>
-                    <p className="card-text line-height-res">Experience : Fresher / Experience both can apply</p>
-                    <p className="card-text">Vacancy : 3</p>
-                  </div>
-                </div>
-                <div className=" bg-transparent">
-                  <div className='d-flex justify-content-center pl-3 pr-3'><hr  className='w-100'/></div>
-                    <div className="bottomButtonHover pb-3">
-                      <button onClick={() => navigate("/apply-now")}>
-                          <div className='btm mx-1 row justify-content-end'>
-                              <div className='col-auto px-1'>
-                                  Apply Now
-                              </div>
-                              <div className='col-auto m-0 p-0 iconHover3 '>
-                                  <BsArrowRight />
-                              </div>
-                          </div>
-                      </button>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-
-
-          <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
-            <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}}>
-                <div className="card-body">
-                  <h5 className="card-title text-capitalize ">C# Developer</h5>
-                  <div className='mt-4 text-muted' style={{lineHeight:"13px", fontSize:"16px"}}>
-                    <p className="card-text line-height-res">Required Skills : Communication Skills, Quick Learner</p>
-                    <p className="card-text">Required Language : .net, c#</p>
-                    <p className="card-text line-height-res">Experience : Fresher / Experience both can apply</p>
-                    <p className="card-text">Vacancy : 4</p>
-                  </div>
-                </div>
-                <div className=" bg-transparent">
-                  <div className='d-flex justify-content-center pl-3 pr-3'><hr  className='w-100'/></div>
-                    <div className="bottomButtonHover pb-3">
-                      <button onClick={() => navigate("/apply-now")}>
-                          <div className='btm mx-1 row justify-content-end'>
-                              <div className='col-auto px-1'>
-                                  Apply Now
-                              </div>
-                              <div className='col-auto m-0 p-0 iconHover3 '>
-                                  <BsArrowRight />
-                              </div>
-                          </div>
-                      </button>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-
-          <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
-            <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}}>
-                <div className="card-body">
-                  <h5 className="card-title text-capitalize ">Manual Tester</h5>
-                  <div className='mt-4 text-muted' style={{lineHeight:"13px", fontSize:"16px"}}>
-                    <p className="card-text line-height-res">Required Skills : Communication Skills, Quick Learner</p>
-                    <p className="card-text">Required Language : Buigzilla , Jira</p>
-                    <p className="card-text line-height-res">Experience : Fresher / Experience both can apply</p>
-                    <p className="card-text">Vacancy : 3</p>
-                  </div>
-                </div>
-                <div className=" bg-transparent">
-                  <div className='d-flex justify-content-center pl-3 pr-3'><hr  className='w-100'/></div>
-                    <div className="bottomButtonHover pb-3">
-                      <button onClick={() => navigate("/apply-now")}>
-                          <div className='btm mx-1 row justify-content-end'>
-                              <div className='col-auto px-1'>
-                                  Apply Now
-                              </div>
-                              <div className='col-auto m-0 p-0 iconHover3 '>
-                                  <BsArrowRight />
-                              </div>
-                          </div>
-                      </button>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          
-
-          
+          )})}
+          {/* </Slider> */}
         </div>
       </div>
     </>

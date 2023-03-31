@@ -26,7 +26,7 @@
 -moz-box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
 box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
 }
-.box-effect::before{
+/* .box-effect::before{
     content: "";
     width: 0px;
     height: 100%;
@@ -37,19 +37,19 @@ box-shadow: 4px 10px 14px -9px rgba(0,0,0,0.75);
     z-index: -1;
     transition: 1s all;
     border-radius: 5px;
-}
-.box-effect:hover::before{
+} */
+/* .box-effect:hover::before{
     width: 100%;
-}
-.box-effect:hover h5{
+} */
+/* .box-effect:hover h5{
     color: #fff;
-}
-.box-effect:hover p{
+} */
+/* .box-effect:hover p{
     color: white;
-}
-.box-effect:hover .bottomButtonHover button{
+} */
+/* .box-effect:hover .bottomButtonHover button{
     background-color: transparent;
-}
+} */
 
 /* responsive code */
 @media (max-width:480px) {
