@@ -15,7 +15,6 @@ const Carrers = () => {
     useEffect(() => {
         let data = axios.get('http://localhost:6500/addnewjob').then((res)=>{
         setPostData(res.data)
-        console.log(postData)
      })
     }, [])
 
@@ -47,7 +46,7 @@ const Carrers = () => {
       {/* We are hiring */}
       <div className='container mt-5 mb-5'>
         <div className='row'>
-        <h1 className='text-uppercase text-center' style={{color:"#034694"}}>we are hiring for</h1>
+        <h3 className='text-uppercase text-center' style={{color:"#034694"}}>we are hiring for</h3>
           {/* <Slider slidesToShow={3}> */}
           {postData.map(card=>{
             return(

@@ -16,17 +16,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import PagesIcon from '@mui/icons-material/Pages';
-import DynamicFormIcon from '@mui/icons-material/DynamicForm';
-import AppsIcon from '@mui/icons-material/Apps';
-// import HomeMainbar from '../HomeMainbar/HomeMainbar';
-import { Link } from 'react-router-dom';
+import WorkIcon from '@mui/icons-material/Work';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 import Mainbar from '../components/AdminPanel/Mainbar';
-import JobDashboard from '../components/AdminPanel/JobDashboard';
 import WebsiteDashboard from '../components/AdminPanel/WebsiteDashboard';
 
-const drawerWidth = 240;
+const drawerWidth = 290;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -103,7 +100,7 @@ const colorTheme = createTheme({
 });
 const darkTheme = createTheme({
   palette: {
-    mode:'dark'
+    main:"white"
   },
 });
 
@@ -129,9 +126,6 @@ export default function MiniDrawer() {
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" sx={{marginRight: 5, ...(open && { display: 'none' }),}}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" noWrap component="div">
-            Tantransh Admin Panel
-          </Typography>
         </Toolbar>
       </AppBar>
       </ThemeProvider>
@@ -149,11 +143,11 @@ export default function MiniDrawer() {
             <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Dashboard')}>
               <ListItemButton sx={{ minHeight: 48, justifyContent: open ? 'initial' : 'center', px: 2.5, }}>
                 <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center'}}>
-                  {<DashboardIcon/>}
+                  {<PermIdentityIcon/>}
                 </ListItemIcon>
-                <ListItemText primary= "Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary= "Profile" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
-            </ListItem>                 
+            </ListItem>                
         </List>
         <List>
             <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Analytics')}>
@@ -161,7 +155,7 @@ export default function MiniDrawer() {
                 <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center'}}>
                   {<PagesIcon/>}
                 </ListItemIcon>
-                <ListItemText primary= "Analytics" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary= "Department" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>                 
         </List>
@@ -169,9 +163,9 @@ export default function MiniDrawer() {
             <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Charts')}>
               <ListItemButton sx={{ minHeight: 48, justifyContent: open ? 'initial' : 'center', px: 2.5, }}>
                 <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center'}}>
-                  {<DynamicFormIcon/>}
+                  {<EngineeringIcon/>}
                 </ListItemIcon>
-                <ListItemText primary= "Charts" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary= "Employee Details" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>                 
         </List>
@@ -180,23 +174,22 @@ export default function MiniDrawer() {
             <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Widgets')}>
               <ListItemButton sx={{ minHeight: 48, justifyContent: open ? 'initial' : 'center', px: 2.5, }}>
                 <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center'}}>
-                  {<AppsIcon/>}
+                  {<WorkIcon/>}
                 </ListItemIcon>
-                <ListItemText primary= "Widgets" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary= "Job Details" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>                 
         </List>
 
         <Divider />
-          <List>
+        <List>
             
-          </List>
+        </List>
       </Drawer>
       </ThemeProvider>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader/>
         {menuData === 'Dashboard' && <Mainbar/>}
-        {menuData === 'Analytics' && <JobDashboard/>}
         {menuData === 'Charts' && <WebsiteDashboard/>}
         {/* {menuData === 'Widgets' && <Widgets/>} */}
       </Box>

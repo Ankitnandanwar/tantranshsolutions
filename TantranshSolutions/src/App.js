@@ -14,7 +14,7 @@ import JobPanel from './pages/JobPanel'
 import AdminLogin from './pages/AdminLogin'
 import JobPostPanel from './pages/JobPostPanel'
 import ViewJobPost from './pages/ViewJobPost'
-
+import MiniDrawer from './pages/MUIdashboard'
 
 
 const App = () => {
@@ -34,6 +34,7 @@ const App = () => {
         <Route path='/job-dashboard' element={<JobPanel/>}/>
         <Route path='/jobpost-dashboard' element={<JobPostPanel/>}/>
         <Route path='/view-jobpost-dashboard' element={<ViewJobPost/>}/>
+        <Route path='/mui-dashboard' element={<MiniDrawer/>}/>
 
       </Routes>
     </BrowserRouter>

@@ -28,7 +28,7 @@ const JobDashboard = () => {
     const downloadFile = async (uid, uploadfiles) =>{
         const data = await axios.get(`http://localhost:6500/userdetails/${uid}`).then((req,res)=>{
             window.open(`http://localhost:6500/uploads/${uploadfiles}`)
-            // FileDownload(`http://localhost:6500/uploads/${uid.uploadfiles}`, "file.pdf")
+            // FileDownload(`http://localhost:6500/uploads/${uploadfiles}`, "file.pdf")
         })
     }
 
@@ -62,7 +62,7 @@ const JobDashboard = () => {
                                         <td>{i.uemail}</td>
                                         <td>{i.ucontact}</td>
                                         <td>{i.uposition}</td>
-                                        <td><button onClick={()=>downloadFile(i.uid, i.uploadfiles)}>View</button></td>
+                                        <td><button style={{border:"none", backgroundColor:"green", color:"white"}} onClick={()=>downloadFile(i.uid, i.uploadfiles)}>View</button></td>
                                         <td><button className='ml-2 bg-white' style={{ border: "none", color: "red" }} onClick={() => deleteJobPost(i.uid)}>{<MdDelete style={{ fontSize: "22px" }} />}</button></td>
                                     </tr>
                                 ))

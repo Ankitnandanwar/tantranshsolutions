@@ -15,22 +15,13 @@ const Footer = () => {
     <section>
       {/* footer section */}
       <footer className='container-fluid' style={{backgroundColor:"#034694"}}>
-        <div className='row d-flex justify-content-center pt-5' style={{gap:"2rem"}}>
+        <div className='row d-flex justify-content-center pt-4' style={{gap:"2rem"}}>
           <div className='col-12 col-xl-2 col-lg-2 col-md-4 text-white'>
             <div>
-              <p><u>Tantransh Solutions</u></p>
+              <p>Tantransh Solutions</p>
             </div>
             <div>
               <p className='small'>Plot no 194, Kasturba Bhavan, Abhyankar Nagar Rd, opp. Ashish Tower, Bajaj Nagar, Nagpur, Maharashtra 440010.</p>
-            </div>
-          </div>
-          <div className='col-12 col-xl-2 col-lg-2 col-md-4 text-white'>
-            <div>
-              <p className='small'>Subscribe to get important updates</p>
-            </div>
-            <div>
-              <input type="email" placeholder='Your Email' className='mb-3' style={{outline:"none"}}/>
-              <Link to='/'><button className='text-uppercase btn btn-danger'>Subscribe</button></Link>
             </div>
           </div>
           <div className='col-12 col-xl-2 col-lg-2 col-md-4 text-white'>
@@ -61,9 +52,9 @@ const Footer = () => {
             <div className='col-12 col-md-6 col-xl-6 col-lg-6 d-flex justify-content-center'>
               <div><p className='text-white small'>@ {new Date().getFullYear()} Tantransh Solutions. All Rights Reserved</p></div>
             </div>
-            <div className='col-12 col-md-6 col-xl-6 col-lg-6 text-white text-uppercase d-flex justify-content-center' style={{cursor:"pointer"}}>
-              <div className='text-center pb-4'><p>privacy policy <br />terms & conditions</p></div>
-            </div>
+            {/* <div className='col-12 col-md-6 col-xl-6 col-lg-6 text-white text-uppercase d-flex justify-content-center' style={{cursor:"pointer"}}>
+              <div className='text-center pb-1'><p>privacy policy <br />terms & conditions</p></div>
+            </div> */}
           </div>
         </div>
       </footer>

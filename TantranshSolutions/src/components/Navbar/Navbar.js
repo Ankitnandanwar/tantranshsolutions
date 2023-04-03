@@ -33,7 +33,7 @@ const Navbar = () => {
                 </div>
               </li> */}
               <li className="nav-item"><Link className="nav-link" style={{color:"#034694", fontWeight:"500"}} to='/contact-us'>Contact</Link></li>
-              <li className="nav-item"><Link className="nav-link" style={{color:"#034694", fontWeight:"500"}} to='/apply-now'>Job</Link></li>
+              {/* <li className="nav-item"><Link className="nav-link" style={{color:"#034694", fontWeight:"500"}} to='/apply-now'>Job</Link></li> */}
             </ul>
             
           </div>
