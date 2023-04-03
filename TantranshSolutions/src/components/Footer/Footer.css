@@ -1,7 +1,9 @@
 .icons{
     transition: 1s;
     cursor: pointer;
+    color: white;
 }
 .icons:hover{
     transform: scale(1.3);
+    color: white;
 }

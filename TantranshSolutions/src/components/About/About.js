@@ -10,7 +10,7 @@ const About = () => {
             <div className='container mt-5 pt-5 '>
                 <div className=' row p-sm-5'>
                     <div className='aboutData col-12 col-xl-6 col-lg-6 col-md-12 mt-3'>
-                        <div className='mx-0 mx-sm-5'><h1 style={{color:"#034694"}}>ABOUT</h1></div>
+                        <div className='mx-0 mx-sm-5'><h1 style={{color:"#034694"}}>About</h1></div>
                         <div className='mx-0 mx-sm-5 mt-0 mt-sm-4 text-muted' style={{fontSize:"16px", wordSpacing:"1px", lineHeight:"30px"}}>
                             <p>Founded in 2016, Tantransh Solutions is a software development company committed to delivering top-quality solutions to our clients. 
                             We specialize in developing customized software that meets the specific needs of businesses in a wide range of industries.</p>

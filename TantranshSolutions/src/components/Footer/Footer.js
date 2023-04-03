@@ -4,7 +4,7 @@ import './Footer.css'
 
 import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
-import { CiTwitter } from "react-icons/ci";
+import { SiIndeed } from "react-icons/si";
 import { CiInstagram } from "react-icons/ci";
 
 
@@ -28,11 +28,10 @@ const Footer = () => {
             <div>
               <p>Follow Us</p>
             </div>
-            <div className='d-flex' style={{gap:"1rem", fontSize:"25px"}}>
+            <div className='d-flex' style={{gap:"1rem", fontSize:"28px"}}>
               <div className='icons'><CiFacebook/></div>
-              <div className='icons'><CiInstagram/></div>
-              <div className='icons'><CiLinkedin/></div>
-              <div className='icons'><CiTwitter/></div>
+              <div><a className='icons' href="https://employers.indeed.com/jobs?from=gnav-empcenter" target="_blank"><SiIndeed/></a></div>
+              <div><a className='icons' href="https://www.linkedin.com/in/tantransh-solutions-4811a3224/?original_referer=" target="_blank"><CiLinkedin/></a></div>
             </div>
           </div>
           <div className='col-12 col-xl-2 col-lg-2 col-md-4 text-white'>
