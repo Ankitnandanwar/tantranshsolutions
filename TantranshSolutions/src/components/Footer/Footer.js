@@ -5,7 +5,6 @@ import './Footer.css'
 import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
 import { SiIndeed } from "react-icons/si";
-import { CiInstagram } from "react-icons/ci";
 
 
 

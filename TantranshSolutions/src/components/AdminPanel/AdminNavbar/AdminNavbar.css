@@ -1,0 +1,76 @@
+header{
+    display: grid;
+    place-items: center;
+    background-color:#34577e;
+}
+
+.adminnav{
+    height: 5rem;
+}
+
+.admincontainer{
+    width: 80%;
+    height: 5rem;
+    /* background-color: rgb(208, 255, 127); */
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    position: static;
+    top: 0%;
+}
+
+.admincontainer h2{
+    color: white;
+}
+.admincontainer ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    height: 5rem;
+}
+.admincontainer ul li {
+    height: 5rem;
+    line-height: 5rem;
+    /* background-color: yellow; */
+    position: relative;
+    cursor: pointer;
+    color: white;
+
+}
+
+.admincontainer ul li:hover{
+    color: rgb(43, 174, 226);
+}
+
+.admincontainer ul li:hover > .admindropdown{
+    visibility: visible;
+    opacity: 1;
+    top: 5rem;
+}
+
+.admincontainer .admindropdown{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    min-width: 12rem;
+    background-color: rgb(47, 72, 103);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+    top: 10rem;
+}
+
+.admincontainer .admindropdown li{
+    height: 3rem;
+    line-height: 3rem;
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+}
+.admincontainer .admindropdown li:hover{
+    color: rgb(43, 226, 61);
+}

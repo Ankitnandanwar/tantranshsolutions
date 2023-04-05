@@ -1,9 +1,8 @@
 import React,{useState} from 'react'
-import LeftSidebar from './LeftSidebar'
-import "./AdminPanel.css"
-import NavbarAdmin from './NavbarAdmin'
+import "../AdminPanel.css"
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 
 const JobPostDashboard = () => {
 
@@ -38,12 +37,9 @@ const JobPostDashboard = () => {
 
   
   return (
-    <div className='AdminDashboard'>
-        <LeftSidebar/>
-        <div className='HomeContainerAdmin'>
-          <NavbarAdmin/>
-
-          <div className="jobpostdashboard">
+        <div>
+          <AdminNavbar/>
+          <div className="container mt-5">
             <h3 className='p-3'>Add New Hiring Post</h3>
                 <div className="form-row pl-0 pl-sm-5 pr-0 pr-sm-5">
                     <div className="form-group col-xl-6 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-3 ">
@@ -72,7 +68,6 @@ const JobPostDashboard = () => {
                 </div>
           </div>
         </div>
-    </div>
   )
 }
 

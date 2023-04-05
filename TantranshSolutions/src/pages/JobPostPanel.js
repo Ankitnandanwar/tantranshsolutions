@@ -1,5 +1,5 @@
 import React from 'react'
-import JobPostDashboard from '../components/AdminPanel/JobPostDashboard'
+import JobPostDashboard from '../components/AdminPanel/JobPostDashboard/JobPostDashboard'
 
 const JobPostPanel = () => {
   return (

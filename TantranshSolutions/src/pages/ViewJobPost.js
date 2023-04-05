@@ -1,5 +1,5 @@
 import React from 'react'
-import PostJobDashboard from '../components/AdminPanel/PostJobDashboard'
+import PostJobDashboard from '../components/AdminPanel/PostJobDashboard/PostJobDashboard'
 
 const ViewJobPost = () => {
   return (

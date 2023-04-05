@@ -9,12 +9,10 @@ import Carrers from './pages/Carrers'
 import ApplynowMain from './pages/Applynow'
 import ThankupageMain from './pages/Thankupage'
 import AdminPanel from './pages/AdminPanel'
-import WebsitePanel from './pages/WebsitePanel'
 import JobPanel from './pages/JobPanel'
 import AdminLogin from './pages/AdminLogin'
 import JobPostPanel from './pages/JobPostPanel'
 import ViewJobPost from './pages/ViewJobPost'
-import MiniDrawer from './pages/MUIdashboard'
 
 
 const App = () => {
@@ -30,11 +28,9 @@ const App = () => {
         <Route path='/thanku' element={<ThankupageMain/>}/>
         <Route path='/admin' element={<AdminLogin/>}/>
         <Route path='/admin-dashboard' element={<AdminPanel/>}/>
-        <Route path='/website-dashboard' element={<WebsitePanel/>}/>
         <Route path='/job-dashboard' element={<JobPanel/>}/>
         <Route path='/jobpost-dashboard' element={<JobPostPanel/>}/>
         <Route path='/view-jobpost-dashboard' element={<ViewJobPost/>}/>
-        <Route path='/mui-dashboard' element={<MiniDrawer/>}/>
 
       </Routes>
     </BrowserRouter>

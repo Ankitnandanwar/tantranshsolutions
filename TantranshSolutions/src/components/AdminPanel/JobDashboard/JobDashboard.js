@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import LeftSidebar from './LeftSidebar'
-import "./AdminPanel.css"
-import NavbarAdmin from './NavbarAdmin'
+import "../AdminPanel.css"
 import axios from "axios"
 import { MdDelete } from "react-icons/md";
 import FileDownload from "js-file-download"
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
+import "./JobDashboard.css"
 
 const JobDashboard = () => {
     const [datas, setData] = useState([])
@@ -35,15 +35,13 @@ const JobDashboard = () => {
 
 
     return (
-        <div className='AdminDashboard'>
-            <LeftSidebar />
-            <div className='HomeContainerAdmin'>
-                <NavbarAdmin />
-                <div className="listContainer">
-                    <div className="listTitle">Job Application Form Details</div>
-                    <table className="table">
+            <div>
+                <AdminNavbar />
+                <div className="container mt-5" >
+                    <div className="listTitle text-primary"><h4>Job Application Form Details</h4></div>
+                    <table className="table table-striped" style={{border:"1px solid lightgray"}}>
                         <thead>
-                            <tr>
+                            <tr style={{backgroundColor:"#34577e", color:"white"}}>
                                 <th scope="col">Sr No.</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
@@ -57,13 +55,13 @@ const JobDashboard = () => {
                             {
                                 datas.map((i) => (
                                     <tr>
-                                        <td>{i.uid}</td>
-                                        <td>{i.uname}</td>
-                                        <td>{i.uemail}</td>
-                                        <td>{i.ucontact}</td>
-                                        <td>{i.uposition}</td>
-                                        <td><button style={{border:"none", backgroundColor:"green", color:"white"}} onClick={()=>downloadFile(i.uid, i.uploadfiles)}>View</button></td>
-                                        <td><button className='ml-2 bg-white' style={{ border: "none", color: "red" }} onClick={() => deleteJobPost(i.uid)}>{<MdDelete style={{ fontSize: "22px" }} />}</button></td>
+                                        <td className='text-muted'>{i.uid}</td>
+                                        <td className='text-muted'>{i.uname}</td>
+                                        <td className='text-muted'>{i.uemail}</td>
+                                        <td className='text-muted'>{i.ucontact}</td>
+                                        <td className='text-muted'>{i.uposition}</td>
+                                        <td><button className='ml-2' style={{border:"none", padding:"2px 8px",letterSpacing:"0.7px",borderRadius:"5px", backgroundColor:"#32CD32", color:"white"}} onClick={()=>downloadFile(i.uid, i.uploadfiles)}>View</button></td>
+                                        <td><button className='' style={{ border:"none", padding:"2px 8px",letterSpacing:"0.7px",borderRadius:"5px", backgroundColor:"red", color:"white" }} onClick={() => deleteJobPost(i.uid)}>Delete</button></td>
                                     </tr>
                                 ))
                             }
@@ -71,7 +69,6 @@ const JobDashboard = () => {
                     </table>
                 </div>
             </div>
-        </div>
     )
 }
 
