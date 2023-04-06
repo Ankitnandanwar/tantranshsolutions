@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "../AdminPanel.css"
 import axios from "axios"
-import { MdDelete } from "react-icons/md";
 import FileDownload from "js-file-download"
 import AdminNavbar from '../AdminNavbar/AdminNavbar';
 import "./JobDashboard.css"
@@ -31,7 +30,6 @@ const JobDashboard = () => {
             // FileDownload(`http://localhost:6500/uploads/${uploadfiles}`, "file.pdf")
         })
     }
-
 
 
     return (

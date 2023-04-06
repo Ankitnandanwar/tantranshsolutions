@@ -60,7 +60,7 @@ const JobPostDashboard = () => {
                     </div>
                     <div className="form-group col-xl-6 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-3">
                         <label htmlFor="">Enter Vacancy</label>
-                        <input type="text" name='experience' required className="form-control px-3 p-2" placeholder="Enter vacancy details" onChange={(e) => setVacancy(e.target.value)} autoComplete='off'/>
+                        <input type="text" name='vacancy' required className="form-control px-3 p-2" placeholder="Enter vacancy details" onChange={(e) => setVacancy(e.target.value)} autoComplete='off'/>
                     </div>
                     <div className="form-group col-xl-12 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-3 d-flex justify-content-center">
                         <button className="btn p-2 text-white" onClick={() => handlesubmit()} style={{ backgroundColor:" #4CBB17", fontWeight:"500"}}>Add Job</button>

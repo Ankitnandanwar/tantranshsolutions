@@ -44,6 +44,17 @@ const imgConfig = multer.diskStorage({
     }
 })
 
+// img filter 
+const isImage = (req,file,cb)=>{
+    if(file.mimetype.startsWith("image")){
+        cb(null,true)
+    }else{
+        cb(null, Error("only image is allowed"))
+    }
+}
+
+const adminupload = multer({storage:imgConfig, fileFilter:isImage})
+
 const upload = multer({storage:imgConfig})
   
 
@@ -187,8 +198,40 @@ app.delete("/addnewjob/:pjid", (req,res)=>{
 
 
 
+// Update admin Profile using post method
+app.post("/adminprofile",adminupload.single("file"), (req,res)=>{
+    console.log(req.file)
+    console.log(req.body)
 
+    const {ProfileName, Designation, Address} = req.body;
+    const {filename} = req.file;
 
+    if(!filename){
+        res.status(422).json({status:422, message:"fill all details"})
+    }
+    try {
+        db.query("INSERT INTO dashboardprofile SET ?", {prname:ProfileName, prdesig:Designation, praddr:Address, primg:filename}, (err,result)=>{
+            if(err){
+                console.log(err)
+            }else{
+                console.log("profile data and image added successfully")
+                res.status(201).json({status:201, data:req.body})
+            }
+        })
+        
+    } catch (error) {
+        res.status(422).json({status:422, error})
+    }
+})
+
+// View admin profile details
+app.get("/adminprofile", (req,res)=>{
+    const q = "SELECT * FROM dashboardprofile"
+    db.query(q, (err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
 
 
 
