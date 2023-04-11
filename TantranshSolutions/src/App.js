@@ -19,19 +19,18 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomeMain/>} />
+        <Route path='/'  element={<HomeMain/>} />
         <Route path='/about' element={<AboutUs/>}/>
         <Route exact path='*' element={<ErrorPage/>}/>
         <Route path='/contact-us' element={<ContactUs/>}/>
-        <Route path='/carrers' element={<Carrers/>}/>
+        <Route path='/careers' element={<Carrers/>}/>
         <Route path='/apply-now' element={<ApplynowMain/>}/>
         <Route path='/thanku' element={<ThankupageMain/>}/>
-        <Route path='/admin' element={<AdminLogin/>}/>
+        <Route path='/admin' exact={true} element={<AdminLogin/>}/>
         <Route path='/admin-dashboard' element={<AdminPanel/>}/>
         <Route path='/job-dashboard' element={<JobPanel/>}/>
         <Route path='/jobpost-dashboard' element={<JobPostPanel/>}/>
         <Route path='/view-jobpost-dashboard' element={<ViewJobPost/>}/>
-
       </Routes>
     </BrowserRouter>
   )

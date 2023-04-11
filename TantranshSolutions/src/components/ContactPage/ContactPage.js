@@ -22,7 +22,7 @@ const ContactPage = () => {
                         <div className="form-group col-xl-6 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-2">
                             <input style={{height:"35px", fontSize:"13.5px"}} type="number" name='phone' required className="form-control px-3 p-2" placeholder="Enter Phone" autoComplete='off'/>
                         </div>
-                        <div class="form-group col-xl-6 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-2">
+                        <div className="form-group col-xl-6 pt-3 pt-sm-0 pl-3 pl-sm-0 pr-3 pr-sm-0 pl-xl-3 pr-xl-3 pt-xl-2">
                             <select style={{fontSize:"13.5px"}} id="inputState" name='product' required className="form-control px-3 h-100 text-muted">
                                 <option selected>Select Product</option>
                                 <option>Web Design & Development</option>

@@ -30,14 +30,14 @@ const Mainbar = () => {
   }
 
   const getUserData = async() =>{
-    const res = await axios.get("/adminprofile",{
+    const res = await axios.get("http://localhost:6500/adminprofile",{
       headers:{
         "Content-Type" : "application/json"
       }
     })
     if(res.status === 201){
       console.log("data get")
-      setPrData(res.data)
+      setPrData(res.data.data)
     }else{
       console.log("error")
     }

@@ -25,7 +25,7 @@ const Navbar = () => {
               <li className="nav-item"><Link className="nav-link navigation-link" style={{color:"#034694", fontWeight:"500"}} to='/about'>About</Link></li>
               {/* <li><button onClick={()=>{navigate("/about")}}>About</button></li> */}
               {/* <Link to="/about">About</Link> */}
-              <li className="nav-item"><Link className="nav-link navigation-link" style={{color:"#034694", fontWeight:"500"}} to='/carrers'>Careers</Link></li>
+              <li className="nav-item"><Link className="nav-link navigation-link" style={{color:"#034694", fontWeight:"500"}} to='/careers'>Careers</Link></li>
               {/* <li className="nav-item dropdown"><Link className="nav-link display-4 dropdown-toggle" to='/' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Carrers</Link>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <Link className="dropdown-item" to='/'>React Js</Link>

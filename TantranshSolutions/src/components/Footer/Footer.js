@@ -28,7 +28,7 @@ const Footer = () => {
               <p>Follow Us</p>
             </div>
             <div className='d-flex' style={{gap:"1rem", fontSize:"28px"}}>
-              <div className='icons'><CiFacebook/></div>
+              {/* <div className='icons'><CiFacebook/></div> */}
               <div><a className='icons' href="https://employers.indeed.com/jobs?from=gnav-empcenter" target="_blank"><SiIndeed/></a></div>
               <div><a className='icons' href="https://www.linkedin.com/in/tantransh-solutions-4811a3224/?original_referer=" target="_blank"><CiLinkedin/></a></div>
             </div>

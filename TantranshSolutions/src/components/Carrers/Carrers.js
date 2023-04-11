@@ -4,7 +4,6 @@ import { BsArrowRight } from "react-icons/bs";
 import { useNavigate, createSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import './Carrers.css'
-import Slider from 'infinite-react-carousel';
 
 const Carrers = () => {
 
@@ -29,7 +28,7 @@ const Carrers = () => {
         <div className='row'>
           <div className='col-12 col-lg-6 col-xl-6 col-md-12 mt-5 d-flex justify-content-center align-items-center'>
             <div>
-              <h1 className='text-capitalize' style={{color:"#034694"}}>start your carrer with us</h1>
+              <h1 className='text-capitalize' style={{color:"#034694"}}>start your career with us</h1>
               <p>Tantransh Solutions allows you to create your own identity. We encourage you to take ownership, handle unknowns, 
               cultivate learning attitude and grow with Prismatic.</p>
               <p>At Tantransh Solutions, we have a close knit team and we work just 
@@ -51,7 +50,7 @@ const Carrers = () => {
           {postData.map(card=>{
             return(
             <div className='col-12 col-lg-4 col-xl-4 col-md-6 mt-4'>
-            <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}}>
+            <div className="card mb-3 box-effect" style={{maxwidth: "18rem"}} key={card.id}>
               <div className="card-body p-2">
                 <h5 className="card-title text-capitalize">{card.pjtitle}</h5>
                 <div className='mt-3 text-muted' style={{fontSize:"16px", lineHeight:"15px"}}>
